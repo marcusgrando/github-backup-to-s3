@@ -2,7 +2,7 @@ FROM alpine:latest
 MAINTAINER Marcus Grando <marcus@sbh.eng.br>
 
 RUN apk update \
-    && apk --no-cache add git py-pip py-setuptools postfix openrc \
+    && apk --no-cache add git py2-pip py2-setuptools postfix openrc \
     && pip install --no-cache-dir github-backup awscli \
     && rm -f /var/cache/apk/*
 
